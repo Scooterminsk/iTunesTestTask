@@ -131,6 +131,42 @@ extension AuthViewController {
     
     private func setConstraints() {
         
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
+        ])
+        
+        NSLayoutConstraint.activate([
+            backgroundView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            backgroundView.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor),
+            backgroundView.heightAnchor.constraint(equalTo: view.heightAnchor),
+            backgroundView.widthAnchor.constraint(equalTo: view.widthAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            textFieldsStackView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
+            textFieldsStackView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor),
+            textFieldsStackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 20),
+            textFieldsStackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -20)
+        ])
+        
+        NSLayoutConstraint.activate([
+            loginLabel.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
+            loginLabel.bottomAnchor.constraint(equalTo: textFieldsStackView.topAnchor, constant: -30)
+        ])
+        
+        NSLayoutConstraint.activate([
+            signInButton.heightAnchor.constraint(equalToConstant: 40),
+            signUpButton.heightAnchor.constraint(equalToConstant: 40)
+        ])
+        
+        NSLayoutConstraint.activate([
+            buttonsStackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 20),
+            buttonsStackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -20),
+            buttonsStackView.topAnchor.constraint(equalTo: textFieldsStackView.bottomAnchor, constant: 30)
+        ])
     }
 }
 
