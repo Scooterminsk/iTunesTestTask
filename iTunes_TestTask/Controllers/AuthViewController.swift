@@ -78,6 +78,7 @@ class AuthViewController: UIViewController {
         setupDelegates()
         setConstraints()
         addTap()
+        addObservers()
     }
 
     private func setupViews() {
@@ -109,6 +110,17 @@ class AuthViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+    }
+    
+    private func addObservers() {
+        
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) { (nc) in
+            self.view.frame.origin.y = -100
+        }
+        
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil) { (nc) in
+            self.view.frame.origin.y = 0
+        }
     }
     
     @objc func viewTapped() {
