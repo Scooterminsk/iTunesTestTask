@@ -173,7 +173,11 @@ class SignUpViewController: UIViewController {
     }
     
     private func setupDelegates() {
-        
+        firstNameTextField.delegate = self
+        secondNameTextField.delegate = self
+        phoneNumberTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     @objc func signUpButtonTapped() {
@@ -182,7 +186,24 @@ class SignUpViewController: UIViewController {
     
 }
 
+//MARK: - UITextFieldDelegate
+extension SignUpViewController: UITextFieldDelegate {
+   
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        return false
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        firstNameTextField.resignFirstResponder()
+        secondNameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return true
+    }
+}
 
+//MARK: - SetConstraints
 extension SignUpViewController {
     
     private func setConstraints() {

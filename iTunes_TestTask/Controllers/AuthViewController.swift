@@ -149,7 +149,7 @@ extension AuthViewController: UITextFieldDelegate {
     }
 }
 
-//MARK: - setConstraints
+//MARK: - SetConstraints
 extension AuthViewController {
     
     private func setConstraints() {
