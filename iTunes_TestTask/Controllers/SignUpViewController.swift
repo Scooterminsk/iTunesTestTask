@@ -145,7 +145,31 @@ class SignUpViewController: UIViewController {
     }
     
     private func setupViews() {
+        title = "SignUp"
+        view.backgroundColor = .white
         
+        view.addSubview(scrollView)
+        scrollView.addSubview(backgroundView)
+        
+        elementsStackView = UIStackView(arrangedSubviews: [firstNameTextField,
+                                                          firstNameValidLabel,
+                                                          secondNameTextField,
+                                                          secondNameValidLabel,
+                                                          datePicker,
+                                                          ageValidLabel,
+                                                          phoneNumberTextField,
+                                                          phoneValidLabel,
+                                                          emailTextField,
+                                                          emailValidLabel,
+                                                          passwordTextField,
+                                                          passwordValidLabel],
+                                        axis: .vertical,
+                                        spacing: 10,
+                                        distribution: .fillProportionally)
+        
+        backgroundView.addSubview(registrationLabel)
+        backgroundView.addSubview(elementsStackView)
+        backgroundView.addSubview(signUpButton)
     }
     
     private func setupDelegates() {
