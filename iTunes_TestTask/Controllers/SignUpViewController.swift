@@ -142,6 +142,7 @@ class SignUpViewController: UIViewController {
         setupViews()
         setupDelegates()
         setConstraints()
+        setupDatePicker()
     }
     
     private func setupViews() {
@@ -178,6 +179,16 @@ class SignUpViewController: UIViewController {
         phoneNumberTextField.delegate = self
         emailTextField.delegate = self
         passwordTextField.delegate = self
+    }
+    
+    private func setupDatePicker() {
+        datePicker.datePickerMode = .date
+        datePicker.backgroundColor = .white
+        datePicker.layer.borderColor = UIColor.lightGray.cgColor
+        datePicker.layer.borderWidth = 1
+        datePicker.layer.cornerRadius = 6
+        datePicker.clipsToBounds = true
+        datePicker.tintColor = .black
     }
     
     @objc func signUpButtonTapped() {
