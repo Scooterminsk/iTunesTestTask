@@ -15,6 +15,7 @@
 		E4CBE58428EF3842008E9B81 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58328EF3842008E9B81 /* SignUpViewController.swift */; };
 		E4CBE58628EF38A2008E9B81 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58528EF38A2008E9B81 /* AlbumsViewController.swift */; };
 		E4CBE58828EF4040008E9B81 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58728EF4040008E9B81 /* UIStackView + Extension.swift */; };
+		E4CBE58A28EF47C5008E9B81 /* DetailAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58928EF47C5008E9B81 /* DetailAlbumViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E4CBE58328EF3842008E9B81 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E4CBE58528EF38A2008E9B81 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		E4CBE58728EF4040008E9B81 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
+		E4CBE58928EF47C5008E9B81 /* DetailAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				E4258C9428EDD8BC00A97C27 /* AuthViewController.swift */,
 				E4CBE58328EF3842008E9B81 /* SignUpViewController.swift */,
 				E4CBE58528EF38A2008E9B81 /* AlbumsViewController.swift */,
+				E4CBE58928EF47C5008E9B81 /* DetailAlbumViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4258C9528EDD8BC00A97C27 /* AuthViewController.swift in Sources */,
+				E4CBE58A28EF47C5008E9B81 /* DetailAlbumViewController.swift in Sources */,
 				E4258C9128EDD8BC00A97C27 /* AppDelegate.swift in Sources */,
 				E4CBE58428EF3842008E9B81 /* SignUpViewController.swift in Sources */,
 				E4CBE58828EF4040008E9B81 /* UIStackView + Extension.swift in Sources */,
