@@ -83,7 +83,20 @@ class AuthViewController: UIViewController {
         view.backgroundColor = .white
         title = "LogIn"
         
+        textFieldsStackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField],
+                                          axis: .vertical,
+                                          spacing: 10,
+                                          distribution: .fillProportionally)
+        buttonsStackView = UIStackView(arrangedSubviews: [signInButton, signUpButton],
+                                       axis: .horizontal,
+                                       spacing: 10,
+                                       distribution: .fillEqually)
         
+        view.addSubview(scrollView)
+        scrollView.addSubview(backgroundView)
+        backgroundView.addSubview(loginLabel)
+        backgroundView.addSubview(textFieldsStackView)
+        backgroundView.addSubview(buttonsStackView)
     }
     
     private func setupDelegates() {

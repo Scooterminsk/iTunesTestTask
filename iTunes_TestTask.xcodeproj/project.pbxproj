@@ -14,6 +14,7 @@
 		E4258C9D28EDD8BD00A97C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4258C9B28EDD8BD00A97C27 /* LaunchScreen.storyboard */; };
 		E4CBE58428EF3842008E9B81 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58328EF3842008E9B81 /* SignUpViewController.swift */; };
 		E4CBE58628EF38A2008E9B81 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58528EF38A2008E9B81 /* AlbumsViewController.swift */; };
+		E4CBE58828EF4040008E9B81 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58728EF4040008E9B81 /* UIStackView + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E4258C9E28EDD8BD00A97C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4CBE58328EF3842008E9B81 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E4CBE58528EF38A2008E9B81 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		E4CBE58728EF4040008E9B81 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		E4CBE58228EF336D008E9B81 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				E4CBE58728EF4040008E9B81 /* UIStackView + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				E4258C9528EDD8BC00A97C27 /* AuthViewController.swift in Sources */,
 				E4258C9128EDD8BC00A97C27 /* AppDelegate.swift in Sources */,
 				E4CBE58428EF3842008E9B81 /* SignUpViewController.swift in Sources */,
+				E4CBE58828EF4040008E9B81 /* UIStackView + Extension.swift in Sources */,
 				E4258C9328EDD8BC00A97C27 /* SceneDelegate.swift in Sources */,
 				E4CBE58628EF38A2008E9B81 /* AlbumsViewController.swift in Sources */,
 			);
