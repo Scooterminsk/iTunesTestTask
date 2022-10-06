@@ -218,8 +218,38 @@ extension SignUpViewController: UITextFieldDelegate {
 extension SignUpViewController {
     
     private func setConstraints() {
-        NSLayoutConstraint.activate([
         
+        NSLayoutConstraint.activate([
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0)
+        ])
+        
+        NSLayoutConstraint.activate([
+            backgroundView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            backgroundView.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor),
+            backgroundView.heightAnchor.constraint(equalTo: view.heightAnchor),
+            backgroundView.widthAnchor.constraint(equalTo: view.widthAnchor)
+        ])
+
+        NSLayoutConstraint.activate([
+            elementsStackView.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
+            elementsStackView.centerYAnchor.constraint(equalTo: backgroundView.centerYAnchor),
+            elementsStackView.leadingAnchor.constraint(equalTo: backgroundView.leadingAnchor, constant: 20),
+            elementsStackView.trailingAnchor.constraint(equalTo: backgroundView.trailingAnchor, constant: -20)
+        ])
+        
+        NSLayoutConstraint.activate([
+            registrationLabel.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
+            registrationLabel.bottomAnchor.constraint(equalTo: elementsStackView.topAnchor, constant: -30)
+        ])
+        
+        NSLayoutConstraint.activate([
+            signUpButton.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
+            signUpButton.topAnchor.constraint(equalTo: elementsStackView.bottomAnchor, constant: 30),
+            signUpButton.heightAnchor.constraint(equalToConstant: 40),
+            signUpButton.widthAnchor.constraint(equalToConstant: 300)
         ])
     }
 }
