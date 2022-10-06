@@ -77,6 +77,7 @@ class AuthViewController: UIViewController {
         setupViews()
         setupDelegates()
         setConstraints()
+        addTap()
     }
 
     private func setupViews() {
@@ -102,6 +103,16 @@ class AuthViewController: UIViewController {
     private func setupDelegates() {
         emailTextField.delegate = self
         passwordTextField.delegate = self
+    }
+    
+    private func addTap() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func viewTapped() {
+        view.endEditing(true)
     }
     
     @objc func signInButtonTapped() {
