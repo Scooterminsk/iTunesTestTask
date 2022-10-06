@@ -12,6 +12,8 @@
 		E4258C9528EDD8BC00A97C27 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4258C9428EDD8BC00A97C27 /* AuthViewController.swift */; };
 		E4258C9A28EDD8BD00A97C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4258C9928EDD8BD00A97C27 /* Assets.xcassets */; };
 		E4258C9D28EDD8BD00A97C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4258C9B28EDD8BD00A97C27 /* LaunchScreen.storyboard */; };
+		E4CBE58428EF3842008E9B81 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58328EF3842008E9B81 /* SignUpViewController.swift */; };
+		E4CBE58628EF38A2008E9B81 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58528EF38A2008E9B81 /* AlbumsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E4258C9928EDD8BD00A97C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4258C9C28EDD8BD00A97C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4258C9E28EDD8BD00A97C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4CBE58328EF3842008E9B81 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E4CBE58528EF38A2008E9B81 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				E4258C9428EDD8BC00A97C27 /* AuthViewController.swift */,
+				E4CBE58328EF3842008E9B81 /* SignUpViewController.swift */,
+				E4CBE58528EF38A2008E9B81 /* AlbumsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -184,7 +190,9 @@
 			files = (
 				E4258C9528EDD8BC00A97C27 /* AuthViewController.swift in Sources */,
 				E4258C9128EDD8BC00A97C27 /* AppDelegate.swift in Sources */,
+				E4CBE58428EF3842008E9B81 /* SignUpViewController.swift in Sources */,
 				E4258C9328EDD8BC00A97C27 /* SceneDelegate.swift in Sources */,
+				E4CBE58628EF38A2008E9B81 /* AlbumsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

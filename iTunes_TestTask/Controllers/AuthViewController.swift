@@ -87,7 +87,8 @@ class AuthViewController: UIViewController {
     }
     
     private func setupDelegates() {
-        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     @objc func signInButtonTapped() {
@@ -100,10 +101,22 @@ class AuthViewController: UIViewController {
 
 }
 
+//MARK: - UITextFieldDelegate
+extension AuthViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        return true
+    }
+}
+
+//MARK: - setConstraints
 extension AuthViewController {
     
     private func setConstraints() {
         
     }
 }
+
+
 
