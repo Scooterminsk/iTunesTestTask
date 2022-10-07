@@ -61,7 +61,20 @@ class UserInfoViewController: UIViewController {
     }
     
     private func setupViews() {
+        title = "Active user"
+        view.backgroundColor = .white
         
+        stackView = UIStackView(arrangedSubviews: [firstNameLabel,
+                                                  secondNameLabel,
+                                                  ageLabel,
+                                                  phoneLabel,
+                                                  emailLabel,
+                                                  passwordLabel],
+                                axis: .vertical,
+                                spacing: 10,
+                                distribution: .fillProportionally)
+        
+        view.addSubview(stackView)
     }
    
 
