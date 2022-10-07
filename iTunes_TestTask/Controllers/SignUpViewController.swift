@@ -143,6 +143,11 @@ class SignUpViewController: UIViewController {
         setupDelegates()
         setConstraints()
         setupDatePicker()
+        addKeyboardObservers()
+    }
+    
+    deinit {
+        removeKeyboardObservers()
     }
     
     private func setupViews() {
@@ -203,7 +208,7 @@ extension SignUpViewController: UITextFieldDelegate {
    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        return false
+        return true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -212,6 +217,36 @@ extension SignUpViewController: UITextFieldDelegate {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
         return true
+    }
+}
+
+//MARK: - Keyboard Show & Hide
+
+extension SignUpViewController {
+   
+    private func addKeyboardObservers() {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func removeKeyboardObservers() {
+        
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: Notification) {
+        let userInfo = notification.userInfo
+        let keyboardRect = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        
+        scrollView.contentOffset = CGPoint(x: 0, y: (keyboardRect?.height ?? 0) / 2)
+    }
+    
+    @objc func keyboardWillHide(notification: Notification) {
+        scrollView.contentOffset = .zero
     }
 }
 
