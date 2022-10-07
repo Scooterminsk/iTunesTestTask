@@ -51,7 +51,7 @@ class DetailAlbumViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.backgroundColor = .white
         collectionView.bounces = false
-        collectionView.register(AlbumsTableViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.register(SongsCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
@@ -88,6 +88,8 @@ class DetailAlbumViewController: UIViewController {
     }
 }
 
+//MARK: - CollectionView DataSource & Delegate
+
 extension DetailAlbumViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -116,8 +118,25 @@ extension DetailAlbumViewController: UICollectionViewDataSource, UICollectionVie
 extension DetailAlbumViewController {
     
     private func setConstraints() {
+        
         NSLayoutConstraint.activate([
-            
+            albumLogo.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+            albumLogo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            albumLogo.heightAnchor.constraint(equalToConstant: 100),
+            albumLogo.widthAnchor.constraint(equalToConstant: 100)
+        ])
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 30),
+            stackView.leadingAnchor.constraint(equalTo: albumLogo.trailingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+        ])
+        
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 10),
+            collectionView.leadingAnchor.constraint(equalTo: albumLogo.trailingAnchor, constant: 17),
+            collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
         ])
     }
 }
