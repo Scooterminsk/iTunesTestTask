@@ -84,6 +84,10 @@ class UserInfoViewController: UIViewController {
 extension UserInfoViewController {
     
     private func setConstraints () {
-        
+        NSLayoutConstraint.activate([
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
 }
