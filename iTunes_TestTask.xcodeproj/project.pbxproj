@@ -15,6 +15,7 @@
 		E4A15E5D28F0253400CAC6D0 /* AlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A15E5C28F0253400CAC6D0 /* AlbumsTableViewCell.swift */; };
 		E4A15E5F28F0267100CAC6D0 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A15E5E28F0267100CAC6D0 /* UIViewController + Extension.swift */; };
 		E4A15E6128F02AC000CAC6D0 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A15E6028F02AC000CAC6D0 /* UserInfoViewController.swift */; };
+		E4A15E6328F0829100CAC6D0 /* SongsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A15E6228F0829100CAC6D0 /* SongsCollectionViewCell.swift */; };
 		E4CBE58428EF3842008E9B81 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58328EF3842008E9B81 /* SignUpViewController.swift */; };
 		E4CBE58628EF38A2008E9B81 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58528EF38A2008E9B81 /* AlbumsViewController.swift */; };
 		E4CBE58828EF4040008E9B81 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58728EF4040008E9B81 /* UIStackView + Extension.swift */; };
@@ -32,6 +33,7 @@
 		E4A15E5C28F0253400CAC6D0 /* AlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewCell.swift; sourceTree = "<group>"; };
 		E4A15E5E28F0267100CAC6D0 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		E4A15E6028F02AC000CAC6D0 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		E4A15E6228F0829100CAC6D0 /* SongsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsCollectionViewCell.swift; sourceTree = "<group>"; };
 		E4CBE58328EF3842008E9B81 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E4CBE58528EF38A2008E9B81 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		E4CBE58728EF4040008E9B81 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				E4A15E5C28F0253400CAC6D0 /* AlbumsTableViewCell.swift */,
+				E4A15E6228F0829100CAC6D0 /* SongsCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				E4A15E6128F02AC000CAC6D0 /* UserInfoViewController.swift in Sources */,
 				E4258C9328EDD8BC00A97C27 /* SceneDelegate.swift in Sources */,
 				E4CBE58628EF38A2008E9B81 /* AlbumsViewController.swift in Sources */,
+				E4A15E6328F0829100CAC6D0 /* SongsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
