@@ -67,7 +67,19 @@ class DetailAlbumViewController: UIViewController {
     }
     
     private func setupViews() {
+        view.backgroundColor = .white
         
+        stackView = UIStackView(arrangedSubviews: [albumNameLabel,
+                                                  artistNameLabel,
+                                                  releaseDateLabel,
+                                                  trackCountLabel],
+                                axis: .vertical,
+                                spacing: 10,
+                                distribution: .fillProportionally)
+        
+        view.addSubview(albumLogo)
+        view.addSubview(stackView)
+        view.addSubview(collectionView)
     }
     
     private func setupDelegates() {
