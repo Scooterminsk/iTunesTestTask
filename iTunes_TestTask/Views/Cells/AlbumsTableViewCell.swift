@@ -8,16 +8,71 @@
 import UIKit
 
 class AlbumsTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    private let albumLogo: UIImageView = {
+       let imageView = UIImageView()
+        imageView.backgroundColor = .red
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    private let albumNameLabel: UILabel = {
+       let label = UILabel()
+        label.text = "Name album name"
+        label.font = .systemFont(ofSize: 20)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let artistNameLabel: UILabel = {
+       let label = UILabel()
+        label.text = "Name artist name"
+        label.font = .systemFont(ofSize: 16)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private let trackCountLabel: UILabel = {
+       let label = UILabel()
+        label.text = "16 tracks"
+        label.font = .systemFont(ofSize: 16)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    var stackView = UIStackView()
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        albumLogo.layer.cornerRadius = albumLogo.frame.width / 2
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        setupViews()
+        setConstraints()
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupViews() {
+        
+    }
+    
+}
 
+//MARK: - SetConstraints
+
+extension AlbumsTableViewCell {
+    
+    private func setConstraints() {
+        NSLayoutConstraint.activate([
+            
+        ])
+    }
 }
