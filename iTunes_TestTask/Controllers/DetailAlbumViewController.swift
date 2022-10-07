@@ -83,7 +83,31 @@ class DetailAlbumViewController: UIViewController {
     }
     
     private func setupDelegates() {
+        collectionView.dataSource = self
+        collectionView.delegate = self
+    }
+}
+
+extension DetailAlbumViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? SongsCollectionViewCell {
+            cell.nameSongLabel.text = "Name song"
+            return cell
+        }
         
+        return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(
+            width: collectionView.frame.width,
+            height: 20
+        )
     }
 }
 
