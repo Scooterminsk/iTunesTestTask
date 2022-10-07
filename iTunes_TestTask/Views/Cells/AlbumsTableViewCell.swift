@@ -61,7 +61,17 @@ class AlbumsTableViewCell: UITableViewCell {
     }
     
     private func setupViews() {
-        
+        backgroundColor = .clear
+        selectionStyle = .none
+                
+        stackView = UIStackView(arrangedSubviews: [artistNameLabel,trackCountLabel],
+                                axis: .horizontal,
+                                spacing: 10,
+                                distribution: .equalCentering)
+       
+        addSubview(albumLogo)
+        addSubview(albumNameLabel)
+        addSubview(stackView)
     }
     
 }
