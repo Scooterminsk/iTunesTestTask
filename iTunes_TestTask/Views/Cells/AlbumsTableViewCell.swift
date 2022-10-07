@@ -81,8 +81,24 @@ class AlbumsTableViewCell: UITableViewCell {
 extension AlbumsTableViewCell {
     
     private func setConstraints() {
+        
         NSLayoutConstraint.activate([
-            
+            albumLogo.centerYAnchor.constraint(equalTo: centerYAnchor),
+            albumLogo.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15),
+            albumLogo.heightAnchor.constraint(equalToConstant: 60),
+            albumLogo.widthAnchor.constraint(equalToConstant: 60)
+        ])
+        
+        NSLayoutConstraint.activate([
+            albumNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+            albumNameLabel.leadingAnchor.constraint(equalTo: albumLogo.trailingAnchor, constant: 10),
+            albumNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+        ])
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: albumNameLabel.bottomAnchor, constant: 10),
+            stackView.leadingAnchor.constraint(equalTo: albumLogo.trailingAnchor, constant: 10),
+            stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
         ])
     }
 }

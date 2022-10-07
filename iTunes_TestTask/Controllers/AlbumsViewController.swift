@@ -11,7 +11,7 @@ class AlbumsViewController: UIViewController {
     
     private let tableView: UITableView = {
        let tableView = UITableView()
-        tableView.register(AlbumsViewController.self, forCellReuseIdentifier: "cell")
+        tableView.register(AlbumsTableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
