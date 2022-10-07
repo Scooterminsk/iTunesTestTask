@@ -184,7 +184,7 @@ class SignUpViewController: UIViewController {
     private func setupDatePicker() {
         datePicker.datePickerMode = .date
         datePicker.backgroundColor = .white
-        datePicker.layer.borderColor = UIColor.lightGray.cgColor
+        datePicker.layer.borderColor = #colorLiteral(red: 0.9467977881, green: 0.9467977881, blue: 0.9467977881, alpha: 1)
         datePicker.layer.borderWidth = 1
         datePicker.layer.cornerRadius = 6
         datePicker.clipsToBounds = true
