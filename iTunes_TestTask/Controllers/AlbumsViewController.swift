@@ -36,9 +36,17 @@ class AlbumsViewController: UIViewController {
     }
     
     private func setNavigationBar() {
-       
+        navigationItem.title = "Albums"
+        
+        navigationItem.searchController = searchController
+        
+        let userInfoButton = createCustomButton(selector: #selector(userInfoButtonTapped))
+        navigationItem.rightBarButtonItem = userInfoButton
     }
 
+    @objc func userInfoButtonTapped() {
+        print("userInfoButtonTapped")
+    }
 }
 
 extension AlbumsViewController {
