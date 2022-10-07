@@ -14,6 +14,7 @@
 		E4258C9D28EDD8BD00A97C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4258C9B28EDD8BD00A97C27 /* LaunchScreen.storyboard */; };
 		E4A15E5D28F0253400CAC6D0 /* AlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A15E5C28F0253400CAC6D0 /* AlbumsTableViewCell.swift */; };
 		E4A15E5F28F0267100CAC6D0 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A15E5E28F0267100CAC6D0 /* UIViewController + Extension.swift */; };
+		E4A15E6128F02AC000CAC6D0 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A15E6028F02AC000CAC6D0 /* UserInfoViewController.swift */; };
 		E4CBE58428EF3842008E9B81 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58328EF3842008E9B81 /* SignUpViewController.swift */; };
 		E4CBE58628EF38A2008E9B81 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58528EF38A2008E9B81 /* AlbumsViewController.swift */; };
 		E4CBE58828EF4040008E9B81 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE58728EF4040008E9B81 /* UIStackView + Extension.swift */; };
@@ -30,6 +31,7 @@
 		E4258C9E28EDD8BD00A97C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4A15E5C28F0253400CAC6D0 /* AlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewCell.swift; sourceTree = "<group>"; };
 		E4A15E5E28F0267100CAC6D0 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		E4A15E6028F02AC000CAC6D0 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		E4CBE58328EF3842008E9B81 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E4CBE58528EF38A2008E9B81 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		E4CBE58728EF4040008E9B81 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				E4CBE58328EF3842008E9B81 /* SignUpViewController.swift */,
 				E4CBE58528EF38A2008E9B81 /* AlbumsViewController.swift */,
 				E4CBE58928EF47C5008E9B81 /* DetailAlbumViewController.swift */,
+				E4A15E6028F02AC000CAC6D0 /* UserInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				E4A15E5D28F0253400CAC6D0 /* AlbumsTableViewCell.swift in Sources */,
 				E4CBE58428EF3842008E9B81 /* SignUpViewController.swift in Sources */,
 				E4CBE58828EF4040008E9B81 /* UIStackView + Extension.swift in Sources */,
+				E4A15E6128F02AC000CAC6D0 /* UserInfoViewController.swift in Sources */,
 				E4258C9328EDD8BC00A97C27 /* SceneDelegate.swift in Sources */,
 				E4CBE58628EF38A2008E9B81 /* AlbumsViewController.swift in Sources */,
 			);

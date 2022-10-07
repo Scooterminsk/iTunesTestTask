@@ -43,9 +43,15 @@ class AlbumsViewController: UIViewController {
         let userInfoButton = createCustomButton(selector: #selector(userInfoButtonTapped))
         navigationItem.rightBarButtonItem = userInfoButton
     }
+    
+    private func setupSearchController() {
+        searchController.searchBar.placeholder = "Search"
+        searchController.obscuresBackgroundDuringPresentation = false
+    }
 
     @objc func userInfoButtonTapped() {
-        print("userInfoButtonTapped")
+        let userInfoVC = UserInfoViewController()
+        self.present(userInfoVC, animated: true)
     }
 }
 
