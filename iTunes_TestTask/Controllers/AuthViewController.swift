@@ -78,7 +78,11 @@ class AuthViewController: UIViewController {
         setupDelegates()
         setConstraints()
         addTap()
-        addObservers()
+        addKeyboardObservers()
+    }
+    
+    deinit {
+        removeKeyboardObservers()
     }
 
     private func setupViews() {
@@ -112,17 +116,6 @@ class AuthViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
-    private func addObservers() {
-        
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) { (nc) in
-            self.view.frame.origin.y = -100
-        }
-        
-        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil) { (nc) in
-            self.view.frame.origin.y = 0
-        }
-    }
-    
     @objc func viewTapped() {
         view.endEditing(true)
     }
@@ -147,6 +140,36 @@ extension AuthViewController: UITextFieldDelegate {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()
         return true
+    }
+}
+
+//MARK: - Keyboard Show & Hide
+
+extension AuthViewController {
+   
+    private func addKeyboardObservers() {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func removeKeyboardObservers() {
+        
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: Notification) {
+        let userInfo = notification.userInfo
+        let keyboardRect = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+        
+        scrollView.contentOffset = CGPoint(x: 0, y: (keyboardRect?.height ?? 0) / 2)
+    }
+    
+    @objc func keyboardWillHide(notification: Notification) {
+        scrollView.contentOffset = .zero
     }
 }
 
