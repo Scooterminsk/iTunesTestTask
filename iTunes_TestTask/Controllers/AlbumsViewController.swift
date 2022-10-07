@@ -24,6 +24,8 @@ class AlbumsViewController: UIViewController {
         setupViews()
         setupDelegates()
         setConstraints()
+        setNavigationBar()
+        setupSearchController()
     }
     
     private func setupViews() {
@@ -32,7 +34,9 @@ class AlbumsViewController: UIViewController {
     }
     
     private func setupDelegates() {
-        
+        tableView.dataSource = self
+        tableView.delegate = self
+        searchController.searchBar.delegate = self
     }
     
     private func setNavigationBar() {
@@ -52,6 +56,43 @@ class AlbumsViewController: UIViewController {
     @objc func userInfoButtonTapped() {
         let userInfoVC = UserInfoViewController()
         self.present(userInfoVC, animated: true)
+    }
+}
+
+//MARK: - UITableViewDataSource
+extension AlbumsViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? AlbumsTableViewCell {
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
+}
+
+//MARK: - UITableViewDelegate
+extension AlbumsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        70
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailAlbumVC = DetailAlbumViewController()
+        self.present(detailAlbumVC, animated: true)
+    }
+}
+
+//MARK: - UISearchBarDelegate
+extension AlbumsViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
     }
 }
 
