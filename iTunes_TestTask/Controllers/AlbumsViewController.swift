@@ -60,6 +60,7 @@ class AlbumsViewController: UIViewController {
 }
 
 //MARK: - UITableViewDataSource
+
 extension AlbumsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -76,6 +77,7 @@ extension AlbumsViewController: UITableViewDataSource {
 }
 
 //MARK: - UITableViewDelegate
+
 extension AlbumsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -89,6 +91,7 @@ extension AlbumsViewController: UITableViewDelegate {
 }
 
 //MARK: - UISearchBarDelegate
+
 extension AlbumsViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -96,11 +99,16 @@ extension AlbumsViewController: UISearchBarDelegate {
     }
 }
 
+//MARK: - SetConstraints
+
 extension AlbumsViewController {
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
-            
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
         
     }
