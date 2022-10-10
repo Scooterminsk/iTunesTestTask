@@ -17,7 +17,7 @@ extension String {
     
     enum Regex: String {
         case name = "[a-zA-Z]{1,}"
-        case email = "[a-zA-Z0-9._]+@[a-zA-Z]+//.[a-zA-Z]{2,}"
+        case email = "[a-zA-Z0-9._]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}"
     }
     
     func isValid(validType: ValidType) -> Bool {
