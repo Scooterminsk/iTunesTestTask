@@ -200,15 +200,9 @@ class SignUpViewController: UIViewController {
         print(signUpButtonTapped)
     }
     
-}
-
-//MARK: - UITextFieldDelegate
-
-extension SignUpViewController: UITextFieldDelegate {
-   
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    private func setTextField(textField: UITextField, label: UILabel, validMessage: String, wrongMessage: String, string: String, range: NSRange) {
         
-        let text = (firstNameTextField.text ?? "") + string
+        let text = (textField.text ?? "") + string
         let result: String
         
         if range.length == 1 {
@@ -219,6 +213,15 @@ extension SignUpViewController: UITextFieldDelegate {
         }
         
         firstNameTextField.text = result
+    }
+    
+}
+
+//MARK: - UITextFieldDelegate
+
+extension SignUpViewController: UITextFieldDelegate {
+   
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         return false
     }
