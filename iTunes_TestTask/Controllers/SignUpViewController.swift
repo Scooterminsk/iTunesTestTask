@@ -209,7 +209,7 @@ class SignUpViewController: UIViewController {
         
         if range.length == 1 {
             let end = text.index(text.startIndex, offsetBy: text.count - 1)
-            result = String(text[text.startIndex...end])
+            result = String(text[text.startIndex..<end])
         } else {
             result = text
         }
