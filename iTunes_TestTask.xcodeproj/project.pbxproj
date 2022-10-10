@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E41E34D028F497C400DF6A46 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E34CF28F497C400DF6A46 /* String + Extension.swift */; };
 		E4258C9128EDD8BC00A97C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4258C9028EDD8BC00A97C27 /* AppDelegate.swift */; };
 		E4258C9328EDD8BC00A97C27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4258C9228EDD8BC00A97C27 /* SceneDelegate.swift */; };
 		E4258C9528EDD8BC00A97C27 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4258C9428EDD8BC00A97C27 /* AuthViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E41E34CF28F497C400DF6A46 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		E4258C8D28EDD8BC00A97C27 /* iTunes_TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunes_TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4258C9028EDD8BC00A97C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4258C9228EDD8BC00A97C27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		E4CBE58128EF335F008E9B81 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E41E34CF28F497C400DF6A46 /* String + Extension.swift */,
 				E4CBE58228EF336D008E9B81 /* UIKit */,
 			);
 			path = Extensions;
@@ -216,6 +219,7 @@
 			files = (
 				E4258C9528EDD8BC00A97C27 /* AuthViewController.swift in Sources */,
 				E4A15E5F28F0267100CAC6D0 /* UIViewController + Extension.swift in Sources */,
+				E41E34D028F497C400DF6A46 /* String + Extension.swift in Sources */,
 				E4CBE58A28EF47C5008E9B81 /* DetailAlbumViewController.swift in Sources */,
 				E4258C9128EDD8BC00A97C27 /* AppDelegate.swift in Sources */,
 				E4A15E5D28F0253400CAC6D0 /* AlbumsTableViewCell.swift in Sources */,
