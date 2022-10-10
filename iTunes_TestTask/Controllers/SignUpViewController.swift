@@ -134,7 +134,7 @@ class SignUpViewController: UIViewController {
     private var elementsStackView = UIStackView()
     private var datePicker = UIDatePicker()
     
-    
+    let nameValidType: String.ValidType = .name
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -200,7 +200,7 @@ class SignUpViewController: UIViewController {
         print(signUpButtonTapped)
     }
     
-    private func setTextField(textField: UITextField, label: UILabel, validMessage: String, wrongMessage: String, string: String, range: NSRange) {
+    private func setTextField(textField: UITextField, label: UILabel, validType: String.ValidType, validMessage: String, wrongMessage: String, string: String, range: NSRange) {
         
         let text = (textField.text ?? "") + string
         let result: String
@@ -212,7 +212,15 @@ class SignUpViewController: UIViewController {
             result = text
         }
         
-        firstNameTextField.text = result
+        textField.text = result
+        
+        if result.isValid(validType: validType) {
+            label.text = validMessage
+            label.textColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
+        } else {
+            label.text = wrongMessage
+            label.textColor = #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)
+        }
     }
     
 }
@@ -222,6 +230,25 @@ class SignUpViewController: UIViewController {
 extension SignUpViewController: UITextFieldDelegate {
    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        switch textField {
+        case firstNameTextField: setTextField(textField: firstNameTextField,
+                                              label: firstNameValidLabel,
+                                              validType: .name,
+                                              validMessage: "First name is valid",
+                                              wrongMessage: "Only a-z, A-Z characters, min 1 character",
+                                              string: string,
+                                              range: range)
+        case secondNameTextField: setTextField(textField: secondNameTextField,
+                                               label: secondNameValidLabel,
+                                               validType: .name,
+                                               validMessage: "Second name is valid",
+                                               wrongMessage: "Only a-z, A-Z characters, min 1 character",
+                                               string: string,
+                                               range: range)
+        default:
+            break
+        }
         
         return false
     }
