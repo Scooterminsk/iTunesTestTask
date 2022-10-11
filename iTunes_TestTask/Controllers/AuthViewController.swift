@@ -41,6 +41,7 @@ class AuthViewController: UIViewController {
        let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.placeholder = "Enter password"
+        textField.isSecureTextEntry = true
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
