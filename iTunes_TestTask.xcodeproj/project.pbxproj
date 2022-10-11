@@ -15,6 +15,7 @@
 		E4258C9D28EDD8BD00A97C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4258C9B28EDD8BD00A97C27 /* LaunchScreen.storyboard */; };
 		E49E0C1828F59B0C00388ECB /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E0C1728F59B0C00388ECB /* UserDefaultsManager.swift */; };
 		E49E0C1B28F59B9B00388ECB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E0C1A28F59B9B00388ECB /* UserModel.swift */; };
+		E49E0C1D28F5A18A00388ECB /* AlertOk.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E0C1C28F5A18A00388ECB /* AlertOk.swift */; };
 		E4A15E5D28F0253400CAC6D0 /* AlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A15E5C28F0253400CAC6D0 /* AlbumsTableViewCell.swift */; };
 		E4A15E5F28F0267100CAC6D0 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A15E5E28F0267100CAC6D0 /* UIViewController + Extension.swift */; };
 		E4A15E6128F02AC000CAC6D0 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A15E6028F02AC000CAC6D0 /* UserInfoViewController.swift */; };
@@ -36,6 +37,7 @@
 		E4258C9E28EDD8BD00A97C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E49E0C1728F59B0C00388ECB /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		E49E0C1A28F59B9B00388ECB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E49E0C1C28F5A18A00388ECB /* AlertOk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertOk.swift; sourceTree = "<group>"; };
 		E4A15E5C28F0253400CAC6D0 /* AlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewCell.swift; sourceTree = "<group>"; };
 		E4A15E5E28F0267100CAC6D0 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		E4A15E6028F02AC000CAC6D0 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				E49E0C1A28F59B9B00388ECB /* UserModel.swift */,
+				E49E0C1C28F5A18A00388ECB /* AlertOk.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				E4CBE58A28EF47C5008E9B81 /* DetailAlbumViewController.swift in Sources */,
 				E4258C9128EDD8BC00A97C27 /* AppDelegate.swift in Sources */,
 				E4A15E5D28F0253400CAC6D0 /* AlbumsTableViewCell.swift in Sources */,
+				E49E0C1D28F5A18A00388ECB /* AlertOk.swift in Sources */,
 				E4CBE58428EF3842008E9B81 /* SignUpViewController.swift in Sources */,
 				E49E0C1B28F59B9B00388ECB /* UserModel.swift in Sources */,
 				E4CBE58828EF4040008E9B81 /* UIStackView + Extension.swift in Sources */,
