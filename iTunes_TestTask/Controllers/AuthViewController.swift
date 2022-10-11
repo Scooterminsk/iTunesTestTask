@@ -134,6 +134,9 @@ class AuthViewController: UIViewController {
             let navigationVC = UINavigationController(rootViewController: AlbumsViewController())
             navigationVC.modalPresentationStyle = .fullScreen
             self.present(navigationVC, animated: true)
+            
+            guard let activeUser = user else { return }
+            DataBase.shared.saveActiveUser(user: activeUser)
         } else {
             loginLabel.text = "Wrong password"
             loginLabel.textColor = .red
