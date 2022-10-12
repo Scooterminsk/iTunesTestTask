@@ -145,6 +145,7 @@ class SignUpViewController: UIViewController {
         setupDelegates()
         setConstraints()
         setupDatePicker()
+        addTap()
         addKeyboardObservers()
     }
     
@@ -196,6 +197,16 @@ class SignUpViewController: UIViewController {
         datePicker.layer.cornerRadius = 6
         datePicker.clipsToBounds = true
         datePicker.tintColor = .black
+    }
+    
+    private func addTap() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(viewTapped))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func viewTapped() {
+        view.endEditing(true)
     }
     
     @objc func signUpButtonTapped() {
