@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E41336F228F88FB100E745C8 /* AlbumsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41336F128F88FB100E745C8 /* AlbumsModel.swift */; };
 		E41E34D028F497C400DF6A46 /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41E34CF28F497C400DF6A46 /* String + Extension.swift */; };
 		E4258C9128EDD8BC00A97C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4258C9028EDD8BC00A97C27 /* AppDelegate.swift */; };
 		E4258C9328EDD8BC00A97C27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4258C9228EDD8BC00A97C27 /* SceneDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E41336F128F88FB100E745C8 /* AlbumsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsModel.swift; sourceTree = "<group>"; };
 		E41E34CF28F497C400DF6A46 /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		E4258C8D28EDD8BC00A97C27 /* iTunes_TestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunes_TestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4258C9028EDD8BC00A97C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				E49E0C1A28F59B9B00388ECB /* UserModel.swift */,
 				E49E0C1C28F5A18A00388ECB /* AlertOk.swift */,
+				E41336F128F88FB100E745C8 /* AlbumsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4258C9528EDD8BC00A97C27 /* AuthViewController.swift in Sources */,
+				E41336F228F88FB100E745C8 /* AlbumsModel.swift in Sources */,
 				E4A15E5F28F0267100CAC6D0 /* UIViewController + Extension.swift in Sources */,
 				E41E34D028F497C400DF6A46 /* String + Extension.swift in Sources */,
 				E49E0C1828F59B0C00388ECB /* UserDefaultsManager.swift in Sources */,
