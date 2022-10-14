@@ -17,6 +17,8 @@ class AlbumsViewController: UIViewController {
     }()
     
     private let searchController = UISearchController(searchResultsController: nil)
+    
+    var albums = [Album]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
