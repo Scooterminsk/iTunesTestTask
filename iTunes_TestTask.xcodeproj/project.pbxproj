@@ -14,6 +14,7 @@
 		E4258C9528EDD8BC00A97C27 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4258C9428EDD8BC00A97C27 /* AuthViewController.swift */; };
 		E4258C9A28EDD8BD00A97C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4258C9928EDD8BD00A97C27 /* Assets.xcassets */; };
 		E4258C9D28EDD8BD00A97C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4258C9B28EDD8BD00A97C27 /* LaunchScreen.storyboard */; };
+		E452E82428F9A52100D57E68 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452E82328F9A52100D57E68 /* NetworkRequest.swift */; };
 		E49E0C1828F59B0C00388ECB /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E0C1728F59B0C00388ECB /* UserDefaultsManager.swift */; };
 		E49E0C1B28F59B9B00388ECB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E0C1A28F59B9B00388ECB /* UserModel.swift */; };
 		E49E0C1D28F5A18A00388ECB /* AlertOk.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E0C1C28F5A18A00388ECB /* AlertOk.swift */; };
@@ -37,6 +38,7 @@
 		E4258C9928EDD8BD00A97C27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4258C9C28EDD8BD00A97C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4258C9E28EDD8BD00A97C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E452E82328F9A52100D57E68 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		E49E0C1728F59B0C00388ECB /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		E49E0C1A28F59B9B00388ECB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E49E0C1C28F5A18A00388ECB /* AlertOk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertOk.swift; sourceTree = "<group>"; };
@@ -84,11 +86,20 @@
 				E4CBE58028EF333B008E9B81 /* Views */,
 				E4CBE57F28EF3329008E9B81 /* Controllers */,
 				E49E0C1928F59B7E00388ECB /* Models */,
+				E452E82228F9A50900D57E68 /* Network */,
 				E49E0C1428F59AE100388ECB /* Services */,
 				E4CBE58128EF335F008E9B81 /* Extensions */,
 				E4CBE57E28EF31C8008E9B81 /* Resources */,
 			);
 			path = iTunes_TestTask;
+			sourceTree = "<group>";
+		};
+		E452E82228F9A50900D57E68 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E452E82328F9A52100D57E68 /* NetworkRequest.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		E49E0C1428F59AE100388ECB /* Services */ = {
@@ -261,6 +272,7 @@
 				E4258C9328EDD8BC00A97C27 /* SceneDelegate.swift in Sources */,
 				E4CBE58628EF38A2008E9B81 /* AlbumsViewController.swift in Sources */,
 				E4A15E6328F0829100CAC6D0 /* SongsCollectionViewCell.swift in Sources */,
+				E452E82428F9A52100D57E68 /* NetworkRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
