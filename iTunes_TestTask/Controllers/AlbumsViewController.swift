@@ -28,6 +28,8 @@ class AlbumsViewController: UIViewController {
         setConstraints()
         setNavigationBar()
         setupSearchController()
+        
+        fetchAlbum(albumName: "Doggystyle")
     }
     
     private func setupViews() {
@@ -58,6 +60,23 @@ class AlbumsViewController: UIViewController {
     @objc func userInfoButtonTapped() {
         let userInfoVC = UserInfoViewController()
         self.present(userInfoVC, animated: true)
+    }
+    
+    private func fetchAlbum(albumName: String) {
+        let urlString = "https://itunes.apple.com/search?term=\(albumName)&entity=album&attribute=albumTerm"
+        
+        NetworkDataFetch.shared.fetchAlbum(urlString: urlString) { albumModel, error in
+            
+            if error == nil {
+                
+                guard let albumModel = albumModel else { return }
+                self.albums = albumModel.results
+                print(albumModel.results)
+                
+            } else {
+                print(error!.localizedDescription)
+            }
+        }
     }
 }
 
