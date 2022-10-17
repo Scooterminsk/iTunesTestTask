@@ -66,6 +66,7 @@ class DetailAlbumViewController: UIViewController {
         setupViews()
         setupDelegates()
         setConstraints()
+        setModel()
     }
     
     private func setupViews() {
@@ -87,6 +88,33 @@ class DetailAlbumViewController: UIViewController {
     private func setupDelegates() {
         collectionView.dataSource = self
         collectionView.delegate = self
+    }
+    
+    private func setModel() {
+        guard let model = album else { return }
+        
+        albumNameLabel.text = model.collectionName
+        artistNameLabel.text = model.artistName
+        trackCountLabel.text = "\(model.trackCount) tracks"
+        releaseDateLabel.text = getDate(stringDate: model.releaseDate)
+        getImage(album: model)
+    }
+    
+    private func getImage(album: Album) {
+        if let urlString = album.artworkUrl100 {
+            NetworkRequest.shared.requestData(urlString: urlString) { [weak self] result in
+                switch result {
+                case .success(let data):
+                    let image = UIImage(data: data)
+                    self?.albumLogo.image = image
+                case .failure(let error):
+                    self?.albumLogo.image = nil
+                    print("Error occured while trying to get a logo image" + error.localizedDescription)
+                }
+            }
+        } else {
+            albumLogo.image = nil
+        }
     }
     
     private func getDate(stringDate: String) -> String {
