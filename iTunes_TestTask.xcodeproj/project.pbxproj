@@ -16,6 +16,7 @@
 		E4258C9D28EDD8BD00A97C27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4258C9B28EDD8BD00A97C27 /* LaunchScreen.storyboard */; };
 		E452E82428F9A52100D57E68 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452E82328F9A52100D57E68 /* NetworkRequest.swift */; };
 		E452E82628F9A7B900D57E68 /* NetworkDataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452E82528F9A7B900D57E68 /* NetworkDataFetch.swift */; };
+		E496FADE28FDA28300DDACA0 /* SongsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E496FADD28FDA28300DDACA0 /* SongsModel.swift */; };
 		E49E0C1828F59B0C00388ECB /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E0C1728F59B0C00388ECB /* UserDefaultsManager.swift */; };
 		E49E0C1B28F59B9B00388ECB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E0C1A28F59B9B00388ECB /* UserModel.swift */; };
 		E49E0C1D28F5A18A00388ECB /* AlertOk.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49E0C1C28F5A18A00388ECB /* AlertOk.swift */; };
@@ -41,6 +42,7 @@
 		E4258C9E28EDD8BD00A97C27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E452E82328F9A52100D57E68 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		E452E82528F9A7B900D57E68 /* NetworkDataFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetch.swift; sourceTree = "<group>"; };
+		E496FADD28FDA28300DDACA0 /* SongsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsModel.swift; sourceTree = "<group>"; };
 		E49E0C1728F59B0C00388ECB /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		E49E0C1A28F59B9B00388ECB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E49E0C1C28F5A18A00388ECB /* AlertOk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertOk.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				E49E0C1A28F59B9B00388ECB /* UserModel.swift */,
 				E49E0C1C28F5A18A00388ECB /* AlertOk.swift */,
 				E41336F128F88FB100E745C8 /* AlbumsModel.swift */,
+				E496FADD28FDA28300DDACA0 /* SongsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				E4CBE58828EF4040008E9B81 /* UIStackView + Extension.swift in Sources */,
 				E4A15E6128F02AC000CAC6D0 /* UserInfoViewController.swift in Sources */,
 				E452E82628F9A7B900D57E68 /* NetworkDataFetch.swift in Sources */,
+				E496FADE28FDA28300DDACA0 /* SongsModel.swift in Sources */,
 				E4258C9328EDD8BC00A97C27 /* SceneDelegate.swift in Sources */,
 				E4CBE58628EF38A2008E9B81 /* AlbumsViewController.swift in Sources */,
 				E4A15E6328F0829100CAC6D0 /* SongsCollectionViewCell.swift in Sources */,
