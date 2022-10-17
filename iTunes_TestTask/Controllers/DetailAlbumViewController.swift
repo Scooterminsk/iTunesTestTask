@@ -57,6 +57,8 @@ class DetailAlbumViewController: UIViewController {
     }()
     
     private var stackView = UIStackView()
+    
+    var album: Album?
 
     override func viewDidLoad() {
         super.viewDidLoad()

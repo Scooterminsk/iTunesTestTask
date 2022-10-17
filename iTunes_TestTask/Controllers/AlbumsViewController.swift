@@ -114,6 +114,9 @@ extension AlbumsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailAlbumVC = DetailAlbumViewController()
+        let album = albums[indexPath.row]
+        detailAlbumVC.album = album
+        detailAlbumVC.title = album.artistName
         self.present(detailAlbumVC, animated: true)
     }
 }
