@@ -123,10 +123,13 @@ extension AlbumsViewController: UITableViewDelegate {
 extension AlbumsViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchText != "" {
+        
+        let text = searchText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        
+        if text != "" {
             timer?.invalidate()
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: { [weak self] _ in
-                self?.fetchAlbum(albumName: searchText)
+                self?.fetchAlbum(albumName: text!)
             })
         }
     }
