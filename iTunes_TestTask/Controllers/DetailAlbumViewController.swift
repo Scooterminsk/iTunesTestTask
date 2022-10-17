@@ -110,12 +110,12 @@ class DetailAlbumViewController: UIViewController {
                     let image = UIImage(data: data)
                     self?.albumLogo.image = image
                 case .failure(let error):
-                    self?.albumLogo.image = nil
+                    self?.albumLogo.image = UIImage(named: "DefaultAlbumImage")
                     print("Error occured while trying to get a logo image" + error.localizedDescription)
                 }
             }
         } else {
-            albumLogo.image = nil
+            albumLogo.image = UIImage(named: "DefaultAlbumImage")
         }
     }
     
