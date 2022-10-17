@@ -68,6 +68,7 @@ class DetailAlbumViewController: UIViewController {
         setupDelegates()
         setConstraints()
         setModel()
+        fetchSong(album: album)
     }
     
     private func setupViews() {
@@ -154,12 +155,13 @@ class DetailAlbumViewController: UIViewController {
 extension DetailAlbumViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        songs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? SongsCollectionViewCell {
-            cell.nameSongLabel.text = "Name song"
+            let song = songs[indexPath.row].trackName
+            cell.nameSongLabel.text = song
             return cell
         }
         
