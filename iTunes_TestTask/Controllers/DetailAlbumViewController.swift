@@ -88,6 +88,17 @@ class DetailAlbumViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
+    
+    private func getDate(stringDate: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy'-'MM'-'dd'T'HH':'mm':'ssZZZ"
+        guard let backendDate = dateFormatter.date(from: stringDate) else { return "" }
+        
+        let formatDate = DateFormatter()
+        formatDate.dateFormat = "dd-MM-yyyy"
+        let date = formatDate.string(from: backendDate)
+        return date
+    }
 }
 
 //MARK: - CollectionView DataSource & Delegate
