@@ -59,6 +59,7 @@ class DetailAlbumViewController: UIViewController {
     private var stackView = UIStackView()
     
     var album: Album?
+    var songs = [Song]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,6 +127,25 @@ class DetailAlbumViewController: UIViewController {
         formatDate.dateFormat = "dd-MM-yyyy"
         let date = formatDate.string(from: backendDate)
         return date
+    }
+    
+    private func fetchSong(album: Album?) {
+        
+        guard let album = album else { return }
+        let idAlbum = album.collectionId
+        
+        let stringUrl = "https://itunes.apple.com/lookup?id=\(idAlbum)&entity=song"
+        
+        NetworkDataFetch.shared.fetchSong(urlString: stringUrl) { [weak self] songsModel, error in
+            if error == nil {
+                guard let songsModel = songsModel else { return }
+                self?.songs = songsModel.results
+                self?.collectionView.reloadData()
+            } else {
+                print(error!.localizedDescription)
+                self?.alertOk(title: "Error", message: error!.localizedDescription)
+            }
+        }
     }
 }
 
