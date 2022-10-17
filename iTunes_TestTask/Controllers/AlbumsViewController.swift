@@ -69,6 +69,7 @@ class AlbumsViewController: UIViewController {
             if error == nil {
                 guard let albumModel = albumModel else { return }
                 self.albums = albumModel.results
+                self.tableView.reloadData()
                 print(albumModel.results)
             } else {
                 print(error!.localizedDescription)
@@ -82,11 +83,13 @@ class AlbumsViewController: UIViewController {
 extension AlbumsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        albums.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? AlbumsTableViewCell {
+            let item = albums[indexPath.row]
+            cell.configureCell(album: item)
             return cell
         }
         
@@ -115,8 +118,8 @@ extension AlbumsViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText != "" {
             timer?.invalidate()
-            timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { [weak self] _ in
-                self?.fetchAlbum(albumName: "Doggystyle")
+            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false, block: { [weak self] _ in
+                self?.fetchAlbum(albumName: searchText)
             })
         }
     }
